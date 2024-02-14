@@ -1,10 +1,10 @@
 ADD your .env File and add the follwoing lines
 
-USERNAME=<your user name>
-PASSWORD=<your password>
-TOKEN=<your security Token>
+USERNAME=your user name
+PASSWORD=your password
+TOKEN=your security Token
 
-////////////////////////////////////
+/...................................../
 
 
 In the Eventlister.js
