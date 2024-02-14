@@ -30,7 +30,8 @@ const platformEvents = [
     'ReportEventStream',
     'ReportAnomalyEvent',
     'SessionHijackingEvent',
-    'UriEventStream'
+    'UriEventStream',
+    'demo__e'
     // Add more Platform Event API names as needed
 ];
 const cdcEntities = [
