@@ -1,0 +1,15 @@
+{
+  "name": "event-listener",
+  "version": "1.0.0",
+  "description": "To listend for CDC and events from SF",
+  "main": "eventlistener.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DV",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.4",
+    "jsforce": "^1.11.1"
+  }
+}
