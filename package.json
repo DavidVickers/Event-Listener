@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.4",
-    "jsforce": "^1.11.1"
+    "jsforce": "^3.4.1",
+    "punycode": "^2.3.1"
   }
 }

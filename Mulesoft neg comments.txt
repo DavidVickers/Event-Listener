@@ -1,0 +1,59 @@
+Not the original poster, but I noticed two things about MuleSoft. First and foremost the developer tooling - especially MuleSoft's Anypoint Studio IDE - is horrible. It could compete for the worst IDE experience out there and easily win by a landslide. It requires obscene amounts of resources (CPU/memory) and barely works with Hello World type applications. For anything midly complex than 1+1 = 2, be prepared to face constant freezes, frequent restarts and loss of developer productivity. Mule code is an XML based proprietary DSL, learning which isn't useful outside MuleSoft ecosystem. And this lock in / proprietary way is everywhere. e.g. Mule uses RAML (instead of Open API for API design) or Mule uses its own data transformation language called DataWeave which has a steep learning curve. The second and more concerning issue is the cost. MuleSoft is incredibly expensive as a product, and hiring good MuleSoft consultants is hard. It's difficult to justify it's price tag when there are better options available at lower prices (e.g. apigee/kong for api management). Other reasons include bad documentation, history of miserable support for backward compatibility (aka Mule 3 and Mule 4), treating other programming languages (python, java etc) as second class citizens in Mule etc
+
+
+
+1: MuleSoft Licence Overspending
+MuleSoft licensing requirements are based on factors such as capacity, volumetrics, pattern, usage, deployment, and environments, as well as any extra functionalities you need. With this level of complexity, there can be a conflict between cost and capability. That’s why clients turn to our MuleSoft licensing consultants for a balanced solution.
+
+ 
+2: Skill Levels Preventing Full ROI 
+Even if your staff are software wizards, every tool is unique. That’s why training is essential. By sending your staff on an official MuleSoft training course, you’re sure to increase user adoption and improve performance.
+
+ 
+3: Strategy Misaligned with Goals
+Goals define strategy, and strategy defines technology. If any of these is unaligned, the whole project fails. That’s why consulting a tried and trusted partner is essential. A good MuleSoft consultant should have in-depth technical expertise – not only in MuleSoft, but in all major business systems – and proven experience of business use cases.
+
+ 
+4: Integrations Failing to Perform
+As stated above, MuleSoft is the tech leader for enterprise integration. So if MuleSoft isn’t performing for your business, that shows a misapplication of the software. A MuleSoft support team will provide health checks to identify the underperforming areas and find effective solutions.
+
+ 
+5: Difficulty Finding MuleSoft Staff
+Highly skilled MuleSoft staff are a precious resource – and scarce. Wouldn’t it be great if you could search a network of MuleSoft experts across the UK? A dedicated MuleSoft recruitment agency is the answer.
+
+ 
+6: Systems Threatened by the Future
+MuleSoft is a long-term investment. You want to be covered against potential changes in capacity and usage. A qualified MuleSoft consultant can run through the different scenarios so you’re prepared for any eventuality.
+
+ 
+Six Solutions: An Expert MuleSoft Partner
+The six challenges above each find their solutions in our MuleSoft Partner services. Whether you’re considering the first steps into MuleSoft or need assistance with your existing MuleSoft estate, our certified experts hold the answer.
+
+
+
+You're absolutely right that there is a learning curve to MuleSoft. Sorry to hear about your frustrations. NetSuite is absolutely awful to integrate with if you're doing it for the first time - their documentation is trash and NetSuite itself has so many nuances to it that, especially if you're new to mulesoft, it's an added layer of immense frustration.
+
+I used to work for Apisero too, and I can tell you their consultants are extremely hit and miss. Even if you got some good ones, running with what they produced without prior experience is going to be rough.
+
+But yeah, sorry to hear it. On the off-chance you or your org is open to outside (billable) help, feel free to DM me, as I have direct experience with MuleSoft in both systems you're integrating with.
+
+[RANT] I've been working with Mulesoft since 2018 and I agree with your points, I have witnessed the jump from 3.9.1 to 3.9.3, and then another jump toward 4.3 and 4.4, what a painful landing.
+
+Currently, I hate working with Mulesoft, honest to god, I think the whole concept of a "low code platform" that makes you productive has become a joke, i'll add a point to your well written review.
+
+Mulesoft has become an extremely slow, tedious piece of software, and with this, I really mean, you sit on your computer waiting for Anypoint Studio to load 2-3 projects together, in order to attain the notorious "experience-process-system" pattern
+
+Before anyone dares to ask how much RAM, CPU i have, or if my Anypoint Studio and Workspace are not scanned by the antivirus, let me tell you, i work only with fine rigs (8 core 32 GB ram) and yes, I took care of the antivirus, the folders are in the whitelist , but I did much more.
+
+I have parallelized the maven build, removed unused dependencies and connectors, disabled startup connectivity tests, rationalized connection pooling to minimize the cost of startup, reduced imported flows and resources, and yet, the build/deployment process is crippingly slow, meaning that testing is also slow. Fixing some dumb error takes 4-5 minutes sometimes, and it's not because I don't know the solution , solving a lot of errors is extremely easy, but if you have to wait that long, you are better off by using something else.
+
+Let's not even talk about Anypoint Studio, the stupid IDE that crashes periodically, let's not dwelve into the workspace becoming corrupted and so on and so forth.
+
+If I grab .NET 8 and start building everything myself, I can create basically 4-5 worker services fully integrated with Kafka in a week of dedicated work, basically one per day, the concept of doing the same with Mulesoft scares the hell out of me, and I know what i'm doing with DataWeave, batch components, connectors, configurations etc, I'm not exactly a newbie, but i'm happy that I don't need to use Mulesoft anymore to earn my bucks.
+
+
+Yeah honestly earlier in 2023 I advised a company drop their multimillion dollar contract with them because of how bad their support is around APIM, they have capable developers who prior to mulesoft made spring apis, and if those meet there needs they're better off on their own then spending millions for inaccurate alerting and poor access management. Use AWS if you want something cost effective or Kong if you want good customer support and end to end APIM.
+
+
+
+

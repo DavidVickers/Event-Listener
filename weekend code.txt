@@ -1,0 +1,47 @@
+How To Launch
+Once activated, enable OmniScript access in one of three ways: standalone, embedded, or Vlocity Aura Wrapper.
+
+Standalone
+Once Activated, the OmniScript is compiled and deployed as a standalone Lightning Web Component. Access the LWC in the Salesforce Lightning App Builder in the Custom section and drag it onto the page.
+
+Embedded
+Once Activated, you can embed the component into any Aura or LWC component using the component tag. The component attribute "prefill" accepts string or javascript object.
+
+Examples
+
+<c--guardian--s-f-l-english prefill={prefill} layout="lightning"></c--guardian--s-f-l-english>
+<c--guardian--s-f-l-english prefill='\{"ContextId":"abc","otherParam":"FAQ"}' layout="lightning"></c--guardian--s-f-l-english>
+this[NavigationMixin.Navigate]({
+    type: 'standard__component',
+    attributes: {
+        componentName: 'omnistudio__vlocityLWCOmniWrapper'
+    },
+    state: {
+        c__target: 'c:guardianSFLEnglish',
+        c__layout: 'lightning', // or can be 'newport'
+        c__tabIcon: 'custom:custom18',
+        c__tabLabel: 'GuardianTest',
+    }
+})
+Lightning
+https://storm-d651cd901723cd.lightning.force.com/lightning/page/omnistudio/omniscript?omniscript__type=Guardian&omniscript__subType=SFL&omniscript__language=English&omniscript__theme=lightning&omniscript__tabIcon=custom:custom18&omniscript__tabLabel=GuardianTest
+Newport
+https://storm-d651cd901723cd.lightning.force.com/lightning/page/omnistudio/omniscript?omniscript__type=Guardian&omniscript__subType=SFL&omniscript__language=English&omniscript__theme=newport&omniscript__tabIcon=custom:custom18&omniscript__tabLabel=GuardianTest
+Vlocity Aura Wrapper
+Once Activated, the OmniScript can be accessed using Vlocity’s prebuilt Aura component.
+
+Since Lightning Web Components are not yet URL addressable, you can use this method to pass additional parameters into the OmniScript.
+
+Example
+
+this[NavigationMixin.Navigate]({
+    type: 'standard__component',
+    attributes: {
+        componentName: '__vlocityLWCOmniWrapper'
+    },
+    state: {
+        c__target: 'c:testSubTypeEnglish',
+        c__layout: 'lightning', // or 'newport'
+        c__tabIcon: 'custom:custom18'
+    }
+})

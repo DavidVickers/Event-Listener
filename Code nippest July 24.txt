@@ -1,0 +1,45 @@
+public with sharing class KnowledgeArticleTextExtractor {
+    @InvocableMethod(label='Extract Plain Text from Knowledge Article' description='Removes HTML tags from a rich text field in a Knowledge Article' CapabilityType = 'PromptTemplateType://einstein_gpt__fieldCompletion')
+	
+	
+    public static List<String> extractPlainText(List<Id> articleIds) {
+        List<String> plainTexts = new List<String>();
+        
+        for (Id articleId : articleIds) {
+            // Query the Knowledge Article with the RichTextField__c field
+            Knowledge__kav article = [SELECT Id, RichTextField__c FROM Knowledge__kav WHERE Id = :articleId LIMIT 1];
+            if (article != null) {
+                String plainText = stripHtmlTags(article.RichTextField__c);
+                plainTexts.add(plainText);
+            }
+        }
+        return plainTexts;
+    }
+
+    
+}
+
+
+
+ConnectApi.EinsteinPromptTemplateGenerationsRepresentation[buildVersion=61.0, generationErrors=(),
+
+ generations=(ConnectApi.EinsteinLLMGenerationItemOutput 
+ 
+ 
+ [buildVersion=61.0, contentQualityRepresentation=ConnectApi.EinsteinLlmGenerationContentQualityOutput[buildVersion=61.0, isToxicityDetected=false]
+ 
+ , parameters={finish_reason=stop, index=0, logprobs=null}, 
+ 
+ responseId=34e21d9b-802d-4774-8b4b-a464a6c1d9ce, safetyScoreRepresentation=ConnectApi.EinsteinLlmGenerationSafetyScoreOutput
+ [buildVersion=61.0, hateScore=1.0E-5, physicalScore=0.0, profanityScore=1.5E-4, safetyScore=0.9655756, sexualScore=0.00398, toxicityScore=0.03719, violenceScore=2.4E-4]
+ 
+ , text=The translation of "hello world" into French is "bonjour monde".])
+ 
+ , isSummarized=null, parameters=null, prompt=Translate hello world into French
+, promptTemplateDevName=0hfa5000001DNuHAAW, requestId=chatcmpl-9kD59XFnAJgcpnplfBYoGbTPXZCoz, requestMessages=(), responseMessages=(), slotsMaskingInformation=()]
+
+
+
+
+
+(ConnectApi.EinsteinLLMGenerationItemOutput[buildVersion=61.0, contentQualityRepresentation=ConnectApi.EinsteinLlmGenerationContentQualityOutput[buildVersion=61.0, isToxicityDetected=false], parameters={finish_reason=stop, index=0, logprobs=null}, responseId=5f93013f-ae02-44da-99cc-08e353fdcf72, safetyScoreRepresentation=ConnectApi.EinsteinLlmGenerationSafetyScoreOutput[buildVersion=61.0, hateScore=0.0, physicalScore=0.0, profanityScore=2.0E-5, safetyScore=0.99632406, sexualScore=9.6E-4, toxicityScore=0.00218, violenceScore=2.0E-5], text=The phrase "Hello World" translates into French as "Bonjour Monde".])

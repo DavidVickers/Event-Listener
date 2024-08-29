@@ -1,0 +1,6 @@
+ Paste into terminal to run -->
+ 
+ 
+ 
+ cd /Users/david.vickers/Coding/Node\ Projects/Event\ Listener
+ node eventlistener.js
